@@ -1,0 +1,14 @@
+sha256 roots.bin: 151cda8f308d293c02c2093ac297e0f43e742fb3fa2cdd639ecbf3e8baf739be
+sha256 c10krawczyk.cpp: 1440ec29e07d550c1aae91b96b40c0b72d2ff24aea568753d61e722112687699
+build: g++ -O2 -std=c++17 -fopenmp -ffp-contract=off -frounding-math ; Linux 6.8.0-48-generic x86_64
+ENV: binary64 1, gradual underflow 1, round-to-nearest 1, compiler 12.3.0
+KRAWCZYK: roots 34940 ; certified (unique root in box) 34940 ; largest box radius used 1e-11 ; widest enclosure 5.55e-12
+UNIMODULAR: exact-unimodular 3040 ; certified non-unimodular 31900 ; undecided 0 ; contradictions 0
+DISTINCT: enclosures pairwise disjoint: YES (box tests 647346, overlapping 0)
+GRAPHS: rays 3040 ; O+ ordered pairs 115360, U+ ordered pairs 6400, both 0 ; widest O+ enclosure 2.2e-20, widest U+ enclosure 1.1e-09 (z-scale, MU value 10)
+  excluded pairs: min lower bound away from 0: 8.013e-05 ; min distance from 10: 6.134e-03
+  max degree O+ 144 ; max degree U+ 8
+CONTRACT: N=34940 1, all certified 1, unimodularity decided 1, disjoint 1, 3040 unimodular 1, max U+ degree <= 8 1, O+ and U+ disjoint 1
+C10-CERTIFY: PASS
+exit 0
+sha256 graph_plus.bin: fcf99c11cf2eb1a7ee2bd9e63490265da2a2dcb538f392a01842dcc64c1a8d95

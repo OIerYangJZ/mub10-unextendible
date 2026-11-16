@@ -1,0 +1,7 @@
+  |N_U(r)| =    0, max clique of O[N_U(r)] (cap 10) =  0 : 2240 rays
+  |N_U(r)| =    8, max clique of O[N_U(r)] (cap 10) =  2 : 800 rays
+NBR10: rays 3040 ; rays whose MU-neighbourhood contains an orthonormal basis: 0 ; 0.0s
+TEST6: HOLDS (no quadruple containing the Fourier pair, given catalogue completeness)
+LIST10: orthonormal bases among catalogue rays: 1136 ; rays in no basis: 0 ; max bases through a ray: 4 ; 0.0s
+  |common MU nbhd| =    0, max clique (cap 10) =  0 : 1136 bases
+QUAD: bases 1136 ; bases extendible to a quadruple: 0 ; 0.0s

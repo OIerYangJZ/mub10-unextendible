@@ -1,0 +1,2 @@
+SUBDONE 215 eps=1-11-1-1 ch=-1-1-11: nodes 196182773 fails 0 ; 1/2 at 1441s
+SUBDONE 162 eps=11-11-1 ch=1-111: nodes 692816067 fails 0 ; 2/2 at 1522s

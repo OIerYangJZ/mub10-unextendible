@@ -1,0 +1,15 @@
+SRC_SHA256 7267865364b4e7aef6868b04fe6fbb2bb647513a55a6426ba54dc89196bcc8b1
+BIN_SHA256 e656531a434f7c26e09ef19f06416c64bb06f1e89d88634d5b5501275d32a3b0
+ROOTS_SHA256 151cda8f308d293c02c2093ac297e0f43e742fb3fa2cdd639ecbf3e8baf739be
+HOST YangJinseys-MacBook-Pro-385.local Mon Nov 16 19:24:36 CST 2026
+ENV: binary64 round-to-nearest gradual-underflow 1 ; compiler Apple LLVM 21.0.0 (clang-2100.4.1.1)
+VERSION c10bb6 (branch-descriptor forcing; AUD3 fixes) built Nov 16 2026 18:20:14
+roots 34940 ; unimodular (numerically) 3040 ; uniqueness boxes certified 3040, radius [3e-05, 3e-04] ; 0.4s
+CATALOGUE: 3040 of 3040 roots exactly unimodular ; enclosures pairwise disjoint: yes ; OK
+modulation closure: OK (images not found: 0)
+dilation closure: OK (images not found: 0)
+WORK-STEALING MODE: 11 subproblems: 44,46,64,65,66,68,80,81,82,87,88 ; threads 10
+WORK-STEALING DONE: subproblems 11/11 ; nodes 2610625939 ; fails 0 ; 8497.4s
+C10-BB6-SUBLIST: PASS
+EXIT 0
+MAC_DONE

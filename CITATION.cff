@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the paper."
+title: "No complete set of mutually unbiased bases in dimension ten contains the Fourier pair or three product bases"
+authors:
+  - family-names: Yang
+    given-names: Jinze
+  - family-names: Liu
+    given-names: Yile
+  - family-names: Li
+    given-names: Yangyang
+  - family-names: Deng
+    given-names: Xiu-Hao
+license: Apache-2.0
+repository-code: "https://github.com/OIerYangJZ/mub10-unextendible"

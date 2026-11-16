@@ -1,0 +1,3 @@
+valid logs 28 / 28 ; source 7267865364b4e7ae ; roots 151cda8f308d293c
+subproblems certified: 256 / 256
+C10-BB-MERGE: COMPLETE -- every biunimodular vector of length 10 is one of the 3040 certified rays

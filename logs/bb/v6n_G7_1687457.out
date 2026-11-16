@@ -1,0 +1,14 @@
+SRC_SHA256 7267865364b4e7aef6868b04fe6fbb2bb647513a55a6426ba54dc89196bcc8b1
+BIN_SHA256 f1927033058b6ef078c7422ff4237b90cad8fca47f2fa405590a9f50bb6edca7
+ROOTS_SHA256 151cda8f308d293c02c2093ac297e0f43e742fb3fa2cdd639ecbf3e8baf739be
+HOST node249.prod.phadcloud.local Mon Nov 16 09:15:42 PM CST 2026
+ENV: binary64 round-to-nearest gradual-underflow 1 ; compiler 11.5.0 20240719 (Red Hat 11.5.0-11)
+VERSION c10bb6 (branch-descriptor forcing; AUD3 fixes) built Nov 16 2026 21:15:40
+roots 34940 ; unimodular (numerically) 3040 ; uniqueness boxes certified 3040, radius [3e-05, 3e-04] ; 0.4s
+CATALOGUE: 3040 of 3040 roots exactly unimodular ; enclosures pairwise disjoint: yes ; OK
+modulation closure: OK (images not found: 0)
+dilation closure: OK (images not found: 0)
+WORK-STEALING MODE: 2 subproblems: 162,215 ; threads 108
+WORK-STEALING DONE: subproblems 2/2 ; nodes 888998840 ; fails 0 ; 1522.7s
+C10-BB6-SUBLIST: PASS
+EXIT 0

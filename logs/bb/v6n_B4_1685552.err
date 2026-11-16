@@ -1,0 +1,10 @@
+SUBDONE 254 eps=1-1-1-1-1 ch=1-1-1-1: nodes 5986803 fails 0 ; 1/10 at 377s
+SUBDONE 181 eps=1-1-11-1 ch=-11-11: nodes 20821809 fails 0 ; 2/10 at 388s
+SUBDONE 153 eps=1-111-1 ch=-111-1: nodes 18986337 fails 0 ; 3/10 at 396s
+SUBDONE 137 eps=1111-1 ch=-111-1: nodes 35335351 fails 0 ; 4/10 at 408s
+SUBDONE 243 eps=1-1-1-1-1 ch=-1-111: nodes 13542143 fails 0 ; 5/10 at 409s
+SUBDONE 213 eps=1-11-1-1 ch=-11-11: nodes 17572165 fails 0 ; 6/10 at 415s
+SUBDONE 194 eps=111-1-1 ch=1-111: nodes 35965743 fails 0 ; 7/10 at 415s
+SUBDONE 226 eps=11-1-1-1 ch=1-111: nodes 41959493 fails 0 ; 8/10 at 417s
+SUBDONE 120 eps=1-1-1-11 ch=111-1: nodes 124638211 fails 0 ; 9/10 at 420s
+SUBDONE 170 eps=11-11-1 ch=1-11-1: nodes 38033455 fails 0 ; 10/10 at 422s

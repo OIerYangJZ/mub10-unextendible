@@ -1,0 +1,13 @@
+SUBDONE 143 eps=1111-1 ch=-1-1-1-1: nodes 7127299 fails 0 ; 1/13 at 336s
+SUBDONE 219 eps=1-11-1-1 ch=-1-11-1: nodes 7859367 fails 0 ; 2/13 at 367s
+SUBDONE 251 eps=1-1-1-1-1 ch=-1-11-1: nodes 12191479 fails 0 ; 3/13 at 386s
+SUBDONE 187 eps=1-1-11-1 ch=-1-11-1: nodes 11067373 fails 0 ; 4/13 at 409s
+SUBDONE 177 eps=1-1-11-1 ch=-1111: nodes 32307413 fails 0 ; 5/13 at 409s
+SUBDONE 119 eps=1-1-1-11 ch=-1-1-11: nodes 5311557 fails 0 ; 6/13 at 437s
+SUBDONE 154 eps=1-111-1 ch=1-11-1: nodes 16654631 fails 0 ; 7/13 at 448s
+SUBDONE 165 eps=11-11-1 ch=-11-11: nodes 39333715 fails 0 ; 8/13 at 508s
+SUBDONE 229 eps=11-1-1-1 ch=-11-11: nodes 18583939 fails 0 ; 9/13 at 549s
+SUBDONE 196 eps=111-1-1 ch=11-11: nodes 35557581 fails 0 ; 10/13 at 596s
+SUBDONE 241 eps=1-1-1-1-1 ch=-1111: nodes 55061247 fails 0 ; 11/13 at 696s
+SUBDONE 210 eps=1-11-1-1 ch=1-111: nodes 166586359 fails 0 ; 12/13 at 697s
+SUBDONE 130 eps=1111-1 ch=1-111: nodes 338036797 fails 0 ; 13/13 at 803s

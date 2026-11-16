@@ -1,0 +1,4 @@
+SUBDONE  44 eps=11-111 ch=11-1-1: nodes 705531417 fails 0 ; 1/4 at 3616s
+SUBDONE   5 eps=11111 ch=-11-11: nodes 390190033 fails 0 ; 2/4 at 3623s
+SUBDONE  88 eps=1-11-11 ch=111-1: nodes 256840879 fails 0 ; 3/4 at 3751s
+SUBDONE  34 eps=11-111 ch=1-111: nodes 1026357005 fails 0 ; 4/4 at 3852s

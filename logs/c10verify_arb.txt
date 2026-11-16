@@ -1,0 +1,9 @@
+[   0.1s] roots 34940 ; sha256(roots.bin) 151cda8f308d293c02c2093ac297e0f43e742fb3fa2cdd639ecbf3e8baf739be ; Sage 10.7 ; system built symbolically (10 polynomials, Jacobian by derivative)
+[  75.0s] certified 34940 / 34940 ; unimodular 3040 ; non-unimodular 31900 ; undecided 0 ; contradictions 0 ; largest radius 2^-40
+[  75.4s] enclosures pairwise disjoint: YES (box tests 647346, overlapping 0)
+[  83.2s] Gram matrix of 3040 rays computed in Arb
+[  86.5s] O+ ordered pairs 115360 ; U+ ordered pairs 6400 ; both 0 ; max U+ degree 8
+[  86.5s] edge sets identical to the C++ graph file: YES
+CONTRACT: N=34940 True, all certified True, unimodularity decided True, disjoint True, 3040 unimodular True, max U+ degree <= 8 True, O+/U+ disjoint True, graphs equal C++ True
+ARB-VERIFY: PASS
+arb exit 0

@@ -1,0 +1,56 @@
+SUBDONE  22 eps=1-1111 ch=1-1-11: nodes 265921 fails 0 ; 1/44 at 7s
+SUBDONE   6 eps=11111 ch=1-1-11: nodes 1266045 fails 0 ; 2/44 at 108s
+SUBDONE  14 eps=11111 ch=1-1-1-1: nodes 3985851 fails 0 ; 3/44 at 447s
+SUBDONE  23 eps=1-1111 ch=-1-1-11: nodes 5432619 fails 0 ; 4/44 at 637s
+SUBDONE  13 eps=11111 ch=-11-1-1: nodes 9507219 fails 0 ; 5/44 at 1023s
+SUBDONE  12 eps=11111 ch=11-1-1: nodes 9449575 fails 0 ; 6/44 at 1062s
+SUBDONE  11 eps=11111 ch=-1-11-1: nodes 9923383 fails 0 ; 7/44 at 1073s
+SUBDONE   3 eps=11111 ch=-1-111: nodes 10624547 fails 0 ; 8/44 at 1186s
+SUBDONE  15 eps=11111 ch=-1-1-1-1: nodes 3383473 fails 0 ; 9/44 at 1301s
+SUBDONE   9 eps=11111 ch=-111-1: nodes 16316043 fails 0 ; 10/44 at 1531s
+SUBDONE  31 eps=1-1111 ch=-1-1-1-1: nodes 5083177 fails 0 ; 11/44 at 1621s
+SUBDONE   7 eps=11111 ch=-1-1-11: nodes 3935285 fails 0 ; 12/44 at 1649s
+SUBDONE  30 eps=1-1111 ch=1-1-1-1: nodes 5492613 fails 0 ; 13/44 at 1713s
+SUBDONE  25 eps=1-1111 ch=-111-1: nodes 18434253 fails 0 ; 14/44 at 2123s
+SUBDONE  28 eps=1-1111 ch=11-1-1: nodes 10675193 fails 0 ; 15/44 at 2230s
+SUBDONE  38 eps=11-111 ch=1-1-11: nodes 319451 fails 0 ; 16/44 at 2243s
+SUBDONE  27 eps=1-1111 ch=-1-11-1: nodes 18228669 fails 0 ; 17/44 at 2576s
+SUBDONE  29 eps=1-1111 ch=-11-1-1: nodes 17892499 fails 0 ; 18/44 at 2974s
+SUBDONE  21 eps=1-1111 ch=-11-11: nodes 30822569 fails 0 ; 19/44 at 3499s
+SUBDONE  24 eps=1-1111 ch=111-1: nodes 33835457 fails 0 ; 20/44 at 3701s
+SUBDONE  26 eps=1-1111 ch=1-11-1: nodes 29728767 fails 0 ; 21/44 at 3825s
+SUBDONE  41 eps=11-111 ch=-111-1: nodes 13866085 fails 0 ; 22/44 at 4109s
+SUBDONE  16 eps=1-1111 ch=1111: nodes 40326463 fails 0 ; 23/44 at 4403s
+SUBDONE  43 eps=11-111 ch=-1-11-1: nodes 11084657 fails 0 ; 24/44 at 4736s
+SUBDONE  37 eps=11-111 ch=-11-11: nodes 27121499 fails 0 ; 25/44 at 4832s
+SUBDONE  19 eps=1-1111 ch=-1-111: nodes 11274711 fails 0 ; 26/44 at 4872s
+SUBDONE   8 eps=11111 ch=111-1: nodes 50536841 fails 0 ; 27/44 at 5635s
+SUBDONE   1 eps=11111 ch=-1111: nodes 51920811 fails 0 ; 28/44 at 5824s
+SUBDONE  42 eps=11-111 ch=1-11-1: nodes 27099563 fails 0 ; 29/44 at 6203s
+SUBDONE  18 eps=1-1111 ch=1-111: nodes 60099181 fails 0 ; 30/44 at 10430s
+SUBDONE  17 eps=1-1111 ch=-1111: nodes 33351353 fails 0 ; 31/44 at 10655s
+SUBDONE   0 eps=11111 ch=1111: nodes 84681251 fails 0 ; 32/44 at 14465s
+Command terminated by signal 15
+	Command being timed: "scripts/c10bb6 data/cyclic10/roots.bin"
+	User time (seconds): 403581.68
+	System time (seconds): 93.77
+	Percent of CPU this job got: 2395%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:40:53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2408
+	Voluntary context switches: 81
+	Involuntary context switches: 86529131
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 256
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

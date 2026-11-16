@@ -1,0 +1,14 @@
+roster: 4080 admissible assignments, 10 orbits [60, 60, 180, 180, 240, 480, 720, 720, 720, 720], representatives hit orbits [0, 3, 1, 2, 4, 5, 6, 7, 8, 9] -> COMPLETE
+checking 910 certificates with 12 workers
+o0 inf,inf,0,0,1,1        charts  91/91 verified ; rank n/a ; ORBIT OK
+o1 inf,inf,0,0,2,2        charts  91/91 verified ; rank n/a ; ORBIT OK
+o2 inf,inf,0,0,1,2        charts  91/91 verified ; rank OK (975) ; ORBIT OK
+o3 inf,inf,0,0,1,4        charts  91/91 verified ; rank OK (975) ; ORBIT OK
+o4 inf,inf,0,0,2,3        charts  91/91 verified ; rank OK (975) ; ORBIT OK
+o5 inf,inf,0,1,2,3        charts  91/91 verified ; rank OK (975) ; ORBIT OK
+o6 inf,inf,0,1,2,4        charts  91/91 verified ; rank OK (975) ; ORBIT OK
+o7 inf,inf,0,2,1,3        charts  91/91 verified ; rank OK (975) ; ORBIT OK
+o8 inf,0,1,2,3,4          charts  91/91 verified ; rank OK (987) ; ORBIT OK
+o9 inf,0,1,4,2,3          charts  91/91 verified ; rank OK (987) ; ORBIT OK
+ALL ORBITS COVERED: YES
+MANIFEST4_DONE rc=0
