@@ -18,4 +18,23 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.24297027
     description: "Zenodo archive of release v1.0"
+  - type: url
+    value: "https://arxiv.org/abs/2611.21188"
+    description: "arXiv preprint"
 repository-code: "https://github.com/OIerYangJZ/mub10-unextendible"
+preferred-citation:
+  type: article
+  title: "No complete set of mutually unbiased bases in dimension ten contains the Fourier pair or three product bases"
+  authors:
+    - family-names: Yang
+      given-names: Jinze
+    - family-names: Liu
+      given-names: Yile
+    - family-names: Li
+      given-names: Yangyang
+    - family-names: Deng
+      given-names: Xiu-Hao
+  year: 2026
+  journal: "arXiv preprint arXiv:2611.21188"
+  doi: 10.48550/arXiv.2611.21188
+  url: "https://arxiv.org/abs/2611.21188"

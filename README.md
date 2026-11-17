@@ -4,7 +4,7 @@
 
 Code, certificates and logs for the paper of the same title by Jinze Yang, Yile Liu, Yangyang Li and Xiu-Hao Deng.
 
-- arXiv: *to be added*
+- arXiv: [arXiv:2611.21188](https://arxiv.org/abs/2611.21188)
 - DOI of this archive: [10.5281/zenodo.24297026](https://doi.org/10.5281/zenodo.24297026) (all versions); v1.0: [10.5281/zenodo.24297027](https://doi.org/10.5281/zenodo.24297027)
 
 ## Results
