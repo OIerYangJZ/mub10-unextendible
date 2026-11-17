@@ -1,9 +1,11 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24297026.svg)](https://doi.org/10.5281/zenodo.24297026)
+
 # No complete set of mutually unbiased bases in dimension ten contains the Fourier pair or three product bases
 
 Code, certificates and logs for the paper of the same title by Jinze Yang, Yile Liu, Yangyang Li and Xiu-Hao Deng.
 
 - arXiv: *to be added*
-- DOI of this archive: *to be added on release*
+- DOI of this archive: [10.5281/zenodo.24297026](https://doi.org/10.5281/zenodo.24297026) (all versions); v1.0: [10.5281/zenodo.24297027](https://doi.org/10.5281/zenodo.24297027)
 
 ## Results
 - **Theorem A.** Every triple of mutually unbiased product bases of C² ⊗ C⁵ is strongly unextendible: no vector is

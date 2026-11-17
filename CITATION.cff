@@ -11,4 +11,11 @@ authors:
   - family-names: Deng
     given-names: Xiu-Hao
 license: Apache-2.0
+version: "1.0"
+date-released: 2026-11-17
+doi: 10.5281/zenodo.24297026
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24297027
+    description: "Zenodo archive of release v1.0"
 repository-code: "https://github.com/OIerYangJZ/mub10-unextendible"
