@@ -51,7 +51,8 @@ known only for the Heisenberg--Weyl triple. The proof covers all ten equivalence
 certificates modulo one prime on $91$ charts of $\PP^9\times\PP^9$ for each class ($910$ in all), transferred to characteristic zero by a
 projective reduction lemma, together with an independent rank certificate for eight of the ten classes. We also prove that the pair formed by the standard and the Fourier basis of $\C^{10}$ is contained in no set of four
 MUBs. Exactly $3040$ rays are unbiased to both bases (this confirms the count found numerically by F\"uhr and Rzeszotnik), each of them is unbiased to at most eight of the others, and every triple formed by the pair and a third
-MUB is strongly unextendible. For this we certify $34{,}940$ cyclic $10$-roots in Krawczyk uniqueness boxes, decide
+MUB is strongly unextendible; these statements were announced by Grassl and Sz\"oll\H{o}si in 2022, and we give a
+complete proof. For this we certify $34{,}940$ cyclic $10$-roots in Krawczyk uniqueness boxes, decide
 unimodularity exactly through an involution, and prove completeness by a four-dimensional interval branch-and-bound
 obtained from the Chinese-remainder splitting $\Z_{10}=\Z_2\times\Z_5$.
 \end{abstract}
@@ -92,10 +93,10 @@ Two families of configurations have shaped the work on dimension six, and both h
   obtained by Gröbner-basis computations modulo primes and by numerical homotopy methods
   \cite{Faugere2002,FaugereSvartz2013,SteelMagma,SVW2001}. F\"uhr and Rzeszotnik found numerically $3040$ unimodular
   ones in ten symmetry orbits \cite{FuhrRzeszotnik2015}, and Magsino and Xu found the same number \cite{MagsinoXu2023}.
-  Grassl and Sz\"oll\H{o}si announced a complete set of algebraic solutions to the cyclic-$10$ problem, noting that
-  together with $I$ and $F_{10}$ they yield triples of MUBs \cite{GrasslSzollosi2022}; the announcement does not
-  address extensions to four MUBs, and to our knowledge the consequences for extending $(I,F_{10})$ have not appeared
-  in print. Sun recently studied completions of Fourier-type pairs in dimension $2m$ \cite{Sun2026}.
+  In a 2022 talk, Grassl and Sz\"oll\H{o}si reported, from modular Gr\"obner-basis computations, $3040$ unimodular
+  cyclic $10$-roots, $1136$ complex Hadamard matrices obtained from them, and that all resulting triples with $I$ and
+  $F_{10}$ are strongly unextendible \cite{GrasslSzollosi2022}; no proof has appeared. Sun recently studied
+  completions of Fourier-type pairs in dimension $2m$ \cite{Sun2026}.
 \end{itemize}
 
 We settle both questions in dimension ten.
@@ -113,14 +114,17 @@ In particular, Theorem~\ref{thm:A} answers \cite[Problem~10.8]{MW2026} for $d=10
 Let $I$ be the standard basis and $F_{10}$ the Fourier basis of $\C^{10}$. Then:
 \begin{enumerate}[label=(\roman*)]
 \item exactly $3040$ rays are unbiased to both $I$ and $F_{10}$;
-\item each of these rays is unbiased to at most $8$ of the others; $2240$ of them are unbiased to none;
+\item each of these rays is unbiased to at most $8$ of the others; at least $2240$ of them are unbiased to none;
 \item there are no four MUBs in $\C^{10}$ containing $I$ and $F_{10}$;
 \item there are at most $1136$ bases unbiased to both $I$ and $F_{10}$, and for every such basis $B$ the triple
   $\{I,F_{10},B\}$ is strongly unextendible.
 \end{enumerate}
 \end{theorem}
 
-Theorem~\ref{thm:B}(iv) is the ten-dimensional analogue of Grassl's result for $(I,F_6)$.
+Theorem~\ref{thm:B}(iv) is the ten-dimensional analogue of Grassl's result for $(I,F_6)$. Theorem~\ref{thm:B}(i)
+and (iv) prove the count $3040$ and the strong unextendibility announced by Grassl and Sz\"oll\H{o}si
+\cite{GrasslSzollosi2022}, and our bound of $1136$ third bases matches their $1136$ Hadamard matrices; the method uses
+neither the number of cyclic $10$-roots nor modular computation.
 
 \begin{corollary}\label{cor:C}
 No set of four MUBs in $\C^{10}$, and in particular no complete set, contains
@@ -134,7 +138,11 @@ products. Corollary~\ref{cor:C}(a) follows from Theorem~\ref{thm:A} because a fo
 unbiased to all three product bases, and (b) is Theorem~\ref{thm:B}(iii). Together with \cite[Thm.~2]{MPW2016}, (a)
 lowers the upper bound on the number of product bases (for one factorisation) in a set of four or more MUBs in
 $\C^2\otimes\C^5$ from three to two. Theorem~\ref{thm:A} is the statement expected in
-\cite[after Cor.~6]{MPW2016}.
+\cite[after Cor.~6]{MPW2016}. Damski and \.Zyczkowski recently constructed $p+1$ MUBs in dimension $pq$ for primes
+$p<q$, the standard basis and $p$ maximally entangled bases, and left open whether these sets extend
+\cite{DamskiZyczkowski2026}. For $(p,q)=(2,5)$ their three bases are the image of a triple of mutually unbiased
+product bases under a common permutation of coordinates, so the triple is strongly unextendible by
+Theorem~\ref{thm:A}; it also contains a pair equivalent to $(I,F_{10})$, to which Theorem~\ref{thm:B} applies.
 
 The two results meet in one configuration. Under the Chinese-remainder identification $\Z_{10}\cong\Z_2\times\Z_5$ the
 pair $(I,F_{10})$ is a pair of product bases, and the $40$ product rays unbiased to it are the Gaussian chirps
@@ -152,8 +160,11 @@ points, never to validate them. The root enclosures, the unimodularity decision 
 twice, with independent code and arithmetic, and the graphs agree bit for bit. Two steps have a single implementation:
 the clique enumeration on the conservative graphs (exact combinatorics) and the completeness step of
 Theorem~\ref{thm:B} (Section~\ref{sec:complete}). The logic of an earlier version of the latter was audited
-independently, and the audit's blocking findings were fixed in the version used for all runs; we split it into $256$
-independent subproblems and record each completion. Theorem~\ref{thm:A} uses as external input only the
+independently, and the audit's blocking findings were fixed; a second independent audit then asked for two further
+safeguards, which the final version has: interval operations return the whole real line when an operand is not
+finite, so that a floating-point overflow can never cause a false exclusion, and the whole proof is carried out by
+one build, so that a single catalogue of root boxes is used (Section~\ref{sec:complete}). The program splits into
+$256$ independent subproblems and records each completion. Theorem~\ref{thm:A} uses as external input only the
 classification of \cite{MPW2016}, with the normalisation step from \cite{BWB2010}; Theorem~\ref{thm:B} uses none.
 
 \section{\texorpdfstring{Product triples in $\C^2\otimes\C^5$}{Product triples in C2 x C5}}\label{sec:A}
@@ -252,6 +263,17 @@ $\mathfrak P$-integral and one is a unit; the bihomogeneous equations are preser
 two nonzero vectors over a finite field of characteristic $p$ satisfying the reduced system.
 \end{proof}
 
+\begin{remark}[one prime suffices]
+Reducing a system modulo a prime can in general lose solutions or create spurious ones, which is why modular
+Gr\"obner-basis algorithms combine several primes or verify their output \cite{Arnold2003,MST2021}. We use only the
+direction that is safe for projective schemes: a complex point reduces to a point over $\Fp$, so emptiness over $\Fp$
+implies emptiness over $\C$. Solutions can disappear modulo $p$ only in affine settings, where coordinates may acquire
+$p$ in their denominators; points modulo $p$ that do not lift play no role, since only emptiness is used. Moreover the
+proof does not rely on a Gr\"obner computation being correct: each chart carries an explicit identity
+$1=\sum_vh_vg_v$ over $\F_p$ that an independent program re-expands. An unlucky prime could therefore prevent a
+certificate from existing, but could not produce a false one.
+\end{remark}
+
 \paragraph{Charts.} On $\mathcal V$, either $z_0w_0\ne0$, and we may scale to $z_0=w_0=1$ (the \emph{affine chart}:
 $z_kw_k=1$ and the twenty $f_a$, in $18$ variables), or $z_0w_0=0$, in which case all $z_kw_k=0$; choosing
 $z_i\neq0$ and $w_j\neq0$ forces $i\neq j$, and we scale to $z_i=w_j=1$, $w_i=z_j=0$ (the $90$ \emph{boundary charts}).
@@ -337,7 +359,7 @@ algebraic solutions \cite{GrasslSzollosi2022}. We do not use this count: below w
 $34{,}940$ distinct roots, and in Section~\ref{sec:complete} we prove directly that the unimodular ones are exactly the
 certified $3040$.
 
-\subsection{\texorpdfstring{Certified enclosures of $34{,}940$ roots}{Certified enclosures of 34,940 roots}}
+\subsection{\texorpdfstring{Certified enclosures of $34{,}940$ roots}{Certified enclosures of 34,940 roots}}\label{sec:enclosures}
 We start from the $1747$ approximate representatives published with PHCpack \cite{PHCpack} and expand them by the
 dihedral symmetry of \eqref{eq:cyclic} to $34{,}940$ approximate roots; these serve only as starting points. For each,
 after a Newton polish, we apply Krawczyk's test \cite{Krawczyk1969,Moore1977,Rump1983}: with $\tilde x$ the approximate
@@ -355,8 +377,10 @@ two independent implementations:
   evaluated in Arb ball arithmetic \cite{Arb} at $160$ bits, with dyadic boxes whose endpoints are exact.
 \end{enumerate}
 Both certify all $34{,}940$ boxes (the C++ enclosures have width below $6\times10^{-12}$), and both find the
-enclosures pairwise disjoint. Hence \eqref{eq:cyclic} has at least $34{,}940$ distinct roots. The C++ program checks its floating-point environment (binary64, round to nearest,
-gradual underflow) at run time and records the compiler; both programs exit with an error unless all $34{,}940$ boxes
+enclosures pairwise disjoint. Hence \eqref{eq:cyclic} has at least $34{,}940$ distinct roots. The C++ program checks
+at run time that its arithmetic is binary64 with gradual underflow and records the compiler; since every result is
+widened outward by one unit in the last place, its enclosures remain valid under any IEEE rounding mode. Both programs
+exit with an error unless all $34{,}940$ boxes
 are certified, every root is classified, the enclosures are disjoint and the degree bound below holds.
 
 \paragraph{Exact unimodularity.} The map $\sigma(x)=(1/\overline{x_n})_n$ permutes the roots of \eqref{eq:cyclic},
@@ -394,10 +418,17 @@ direction of $U_k$ is not resolved, or $|V_k|$ is small, $V_k$ is computed inste
 that $|v_m|^2=1$ imposes on it, and the conditions $|V_k|^2=10-|U_k|^2$ and $\Re(U_k\overline{V_k})=0$ are kept as
 residuals. A box is covered if a Krawczyk test on a slightly inflated box certifies a unique zero of four of the
 residuals, and that zero is either excluded by the remaining residuals or mapped by $x_n=z_{n+1}/z_n$ into a certified
-uniqueness box of a cyclic $10$-root. Every other box is bisected. All $256$ subproblems terminate with no unresolved
-box: $3.1\times10^{10}$ boxes in the certifying runs, about $2000$ core-hours in total including duplicated runs (the
-subproblems are independent; they were run on a server, a cluster and a
-workstation with three compilers, all from one source file identified by its SHA-256 hash).
+uniqueness box of a cyclic $10$-root. Every other box is bisected. Every interval operation with a non-finite operand
+returns the whole real line, so an overflow can only prevent an exclusion. All $256$ subproblems terminate with no
+unresolved box. The certifying run was made in one piece on one workstation (one source file and one binary,
+identified by their SHA-256 hashes; $16$ threads, $13.5$ hours): it processed $30{,}859{,}491{,}964$ boxes and
+reported no overflowed enclosure. Its node count agrees, subproblem by subproblem, with earlier split runs of the
+previous version on a server, a cluster and a workstation (about $2000$ core-hours with duplicates).
+
+\paragraph{The catalogue.} The run certifies its own $3040$ uniqueness boxes from the input file (exactly unimodular,
+with pairwise disjoint enclosures, closed under modulation and dilation), so all $256$ subproblems refer to one set of
+$3040$ distinct biunimodular rays. The enclosures of Section~\ref{sec:enclosures} also give $3040$ distinct
+unimodular roots; since every biunimodular ray lies in the first set, the two sets coincide.
 
 \subsection{Overlap graphs}
 For the $3040$ rays we enclose all overlaps $g(r,s)=|\langle\psi_r,\psi_s\rangle|^2$. Let $O$ and $U$ be the graphs of
@@ -483,10 +514,10 @@ unbiased set is finite, without using the degree of the system.
 The programs that generate the inputs and verify all certificates, the lists of SHA-256 checksums of every
 certificate file, the logs of the verification runs, the logs of all branch-and-bound runs and the script that merges
 them (it checks that every one of the $256$ subproblems finished without an unresolved box, under one source file and
-one input file identified by their SHA-256 hashes) are included as ancillary files of the arXiv version. The
-certificates themselves ($910$ chart identities, eight rank witnesses and the root enclosures; about $0.6$\,GB
-compressed) will be deposited in a public repository, with the DOI added in a revised version; until then they are available
-from the authors on request.
+one input file identified by their SHA-256 hashes), and the final completeness program with the complete log of its
+certifying run are included as ancillary files of the arXiv
+version. The programs and the certificates themselves ($910$ chart identities, eight rank witnesses and the root
+enclosures; about $0.6$\,GB compressed) are deposited at Zenodo, \url{https://doi.org/10.5281/zenodo.24297026}.
 
 \section*{Use of AI}
 Claude Opus~5.5 was used for coding and for optimizing the speed of the algorithms.
@@ -495,6 +526,9 @@ Claude Opus~5.5 was used for coding and for optimizing the speed of the algorith
 
 \bibitem{Arb} F.~Johansson, Arb: efficient arbitrary-precision midpoint-radius interval arithmetic, \emph{IEEE Trans.
   Comput.} \textbf{66} (2017), 1281--1292.
+
+\bibitem{Arnold2003} E.~A.~Arnold, Modular algorithms for computing Gr\"obner bases, \emph{J. Symbolic Comput.}
+  \textbf{35} (2003), 403--419.
 
 \bibitem{BBELTZ2007} I.~Bengtsson, W.~Bruzda, \AA.~Ericsson, J.-\AA.~Larsson, W.~Tadej and K.~\.Zyczkowski, Mutually
   unbiased bases and Hadamard matrices of order six, \emph{J. Math. Phys.} \textbf{48} (2007), 052106.
@@ -516,6 +550,9 @@ Claude Opus~5.5 was used for coding and for optimizing the speed of the algorith
 \bibitem{CWT2026} M.~Cárdenes Wuttig and J.~Tindall, \emph{Using topology to reveal all mutually unbiased bases in
   dimension six}, arXiv:2611.06917 [quant-ph], 2026.
 
+\bibitem{DamskiZyczkowski2026} B.~S.~Damski and K.~\.Zyczkowski, Maximally entangled mutually unbiased bases in
+  bipartite systems of unequal prime dimensions, arXiv:2611.18232, 2026.
+
 \bibitem{DEBZ2010} T.~Durt, B.-G.~Englert, I.~Bengtsson and K.~\.Zyczkowski, On mutually unbiased bases, \emph{Int. J.
   Quantum Inf.} \textbf{8} (2010), 535--640.
 
@@ -532,7 +569,7 @@ Claude Opus~5.5 was used for coding and for optimizing the speed of the algorith
   \emph{Phys. Rev. A} \textbf{95} (2017), 012118, doi:10.1103/PhysRevA.95.012118.
 
 \bibitem{GrasslSzollosi2022} M.~Grassl (joint work with F.~Sz\"oll\H{o}si), Circulant complex Hadamard matrices of
-  order 10, invited talk, Hadamard 2020+2 workshop, Kraków, 27 June 2022, book of abstracts, p.~7 (announcement).
+  order 10, invited talk, Hadamard 2020+2 workshop, Kraków, 27 June 2022 (slides; book of abstracts, p.~7).
 
 \bibitem{Grassl2004} M.~Grassl, On SIC-POVMs and MUBs in dimension 6, in \emph{Proc. ERATO Conference on Quantum
   Information Science}, Tokyo, 2004, 60--61; arXiv:quant-ph/0406175.
@@ -573,6 +610,9 @@ Claude Opus~5.5 was used for coding and for optimizing the speed of the algorith
 
 \bibitem{McNultyWeigert2012b} D.~McNulty and S.~Weigert, The limited role of mutually unbiased product bases in
   dimension 6, \emph{J. Phys. A: Math. Theor.} \textbf{45} (2012), 102001.
+
+\bibitem{MST2021} G.~McConnell, H.~Spencer and A.~Tahir, Evidence for and against Zauner's MUB conjecture in
+  $\mathbb{C}^6$, arXiv:2103.08703, 2021.
 
 \bibitem{Moore1977} R.~E.~Moore, A test for existence of solutions to nonlinear systems, \emph{SIAM J. Numer. Anal.}
   \textbf{14} (1977), 611--615.

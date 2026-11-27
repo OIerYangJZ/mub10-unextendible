@@ -1,0 +1,17 @@
+SRC_SHA256 14253c3d87ed9c6d223adcd3ee4bbffe27b130eb44f0f8d6db5ae02b861ac802
+BIN_SHA256 b2898316873d9576a0cd6192d9d09a85f800cda37465cf82d9d059cef1e26813
+ROOTS_SHA256 151cda8f308d293c02c2093ac297e0f43e742fb3fa2cdd639ecbf3e8baf739be
+HOST JinzedeMac-Studio.local Thu Nov 26 14:28:26 CST 2026
+BUILD clang++ -O2 -std=c++17 -Xpreprocessor -fopenmp -I/Users/yangjinze/miniforge3/include -L/Users/yangjinze/miniforge3/lib -Wl,-rpath,/Users/yangjinze/miniforge3/lib -lomp -ffp-contract=off -frounding-math ../../scripts/c10bb7.cpp -o c10bb7_full
+COMPILER Apple clang version 21.0.0 (clang-2100.4.1.1)
+ENV: binary64 round-to-nearest gradual-underflow 1 ; compiler Apple LLVM 21.0.0 (clang-2100.4.1.1)
+VERSION c10bb7 (c10bb6 + nonfinite-safe interval primitives, AUD38) built Nov 26 2026 14:28:26
+roots 34940 ; unimodular (numerically) 3040 ; uniqueness boxes certified 3040, radius [3e-05, 3e-04] ; 0.2s
+CATALOGUE: 3040 of 3040 roots exactly unimodular ; enclosures pairwise disjoint: yes ; OK
+modulation closure: OK (images not found: 0)
+dilation closure: OK (images not found: 0)
+WORK-STEALING MODE: 256 subproblems: 0-255 ; threads 16
+WORK-STEALING DONE: subproblems 256/256 ; nodes 30859491964 ; fails 0 ; 48482.5s
+C10-BB7-SUBLIST: PASS
+C10-BB7 NONFINITE: overflowed enclosures 0 (0 => identical arithmetic to c10bb6 on these nodes)
+EXIT 0

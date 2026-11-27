@@ -22,9 +22,9 @@ interval arithmetic.
 ## Contents
 | path | content |
 |---|---|
-| `paper/` | LaTeX source and PDF of the paper |
+| `paper/` | LaTeX source and PDF of the paper (revised version, v1.1) |
 | `scripts/` | all programs (generation, certification, verification) |
-| `logs/` | logs of the reference verification runs; `logs/bb/` has every branch-and-bound run and the final merge |
+| `logs/` | logs of the reference verification runs; `logs/bb7/` has the certifying completeness run (v1.1); `logs/bb/` has the earlier split runs and their merge |
 | `data/` | the certificate archive, split into 90 MB parts (see below) |
 
 ### Certificate archive
@@ -63,18 +63,29 @@ mkdir -p out && ./c10krawczyk data/cyclic10/roots.bin out                     # 
 sage -python scripts/c10verify_arb.py data/cyclic10/roots.bin out/graph_plus.bin 12   # ARB-VERIFY: PASS
 g++ -O3 -fopenmp -std=c++17 scripts/c10clique.cpp -o c10clique
 ./c10clique out/graph_plus.bin nbr10; ./c10clique out/graph_plus.bin list10 bases.txt; ./c10clique out/graph_plus.bin quad bases.txt
-g++ -O2 -std=c++17 -fopenmp -ffp-contract=off -frounding-math scripts/c10bb6.cpp -o c10bb6
-SUBLIST=0-255 OMP_NUM_THREADS=<cores> ./c10bb6 data/cyclic10/roots.bin       # C10-BB6-SUBLIST: PASS
+g++ -O2 -std=c++17 -fopenmp -ffp-contract=off -frounding-math scripts/c10bb7.cpp -o c10bb7
+SUBLIST=0-255 OMP_NUM_THREADS=<cores> ./c10bb7 data/cyclic10/roots.bin       # C10-BB7-SUBLIST: PASS
 ```
-The completeness step (`c10bb6`) splits into 256 independent subproblems.
-- Any subset can be run with `SUBLIST=a-b,c,...`.
-- Each finished subproblem prints `SUBDONE s ... fails 0`.
-- The run for the paper was split over a server, a cluster and a workstation, all from the same source
-  (sha256 7267865364b4e7aef6868b04fe6fbb2bb647513a55a6426ba54dc89196bcc8b1).
-- It took about 2000 core-hours in total.
+The completeness step splits into 256 independent subproblems.
+- Any subset can be run with `SUBLIST=a-b,c,...`; each finished subproblem prints `SUBDONE s ... fails 0`.
+- `c10bb7.cpp` (v1.1) is `c10bb6.cpp` with fail-closed interval arithmetic: an operation with a non-finite operand
+  returns the whole real line, so a floating-point overflow can never cause a false exclusion. It prints the number
+  of overflowed enclosures at the end.
+- The certifying run of `c10bb7` (`logs/bb7/`) was made in one piece on one workstation (Apple clang 21, 16 threads,
+  48,482 s): `C10-BB7-SUBLIST: PASS`, 256/256 subproblems, 30,859,491,964 boxes, 0 fails, 0 overflowed enclosures.
+  Its single catalogue of 3040 certified boxes is used by all subproblems.
+- The earlier split runs of `c10bb6.cpp` (v1.0; sha256 7267865364b4e7aef6868b04fe6fbb2bb647513a55a6426ba54dc89196bcc8b1;
+  server, cluster and workstation, about 2000 core-hours) are kept in `logs/bb/` with their build record
+  (`logs/bb/BUILD_RECORD.md`); their per-subproblem node counts equal those of the `c10bb7` run.
+  `python3 scripts/c10bb_merge.py logs/bb/<run>.out+logs/bb/<run>.err ...` reproduces their merge
+  (`logs/bb/merge_final.txt`: `C10-BB-MERGE: COMPLETE`).
 
-`python3 scripts/c10bb_merge.py logs/bb/<run>.out+logs/bb/<run>.err ...` reproduces the merge
-(`logs/bb/merge_final.txt`: `C10-BB-MERGE: COMPLETE`).
+SHA-256 of the v1.1 additions:
+```
+14253c3d87ed9c6d223adcd3ee4bbffe27b130eb44f0f8d6db5ae02b861ac802  scripts/c10bb7.cpp
+7d241f1a274c665975a231a523aa4c8c06923e0a19c0c13c6c5b04a6ee59ca39  logs/bb7/full.out
+85eef63ed741384e43bf001cbebffd63ed2dcd75a01a507b77fb2b6621cc6212  logs/bb7/full.err
+```
 
 ## Licences
 Code: Apache License 2.0 (`LICENSE`). Data and certificates: CC BY 4.0 (`LICENSE-DATA`).

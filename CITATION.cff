@@ -11,8 +11,8 @@ authors:
   - family-names: Deng
     given-names: Xiu-Hao
 license: Apache-2.0
-version: "1.0"
-date-released: 2026-11-17
+version: "1.1"
+date-released: 2026-11-27
 doi: 10.5281/zenodo.24297026
 identifiers:
   - type: doi
